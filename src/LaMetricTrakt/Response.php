@@ -20,7 +20,7 @@ class Response
     public function getIcon($category = '') {
         switch ($category) {
             case Category::MOVIES:
-                return 'i7862';
+                return 'a7862';
             case Category::EPISODES:
                 return 'i2649';
             default:
