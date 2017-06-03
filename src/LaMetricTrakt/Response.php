@@ -5,7 +5,7 @@ namespace RobertBoes\LaMetricTrakt;
 
 class Response
 {
-    public function data($result, $category) {
+    public function data($result, $category = '') {
         return $this->asJson([
             'frames' => [
                 [
@@ -17,7 +17,7 @@ class Response
         ]);
     }
 
-    public function getIcon($category) {
+    public function getIcon($category = '') {
         switch ($category) {
             case Category::MOVIES:
                 return 'i7862';

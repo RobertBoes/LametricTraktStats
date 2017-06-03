@@ -45,7 +45,7 @@ class Trakt
         $result = $this->api
             ->getStats($this->user)
             ->getData($this->category, $this->stats_type);
-        return $this->response->data($result);
+        return $this->response->data($result, $this->category);
     }
 
     public function error($message) {
