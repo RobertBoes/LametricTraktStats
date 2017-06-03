@@ -27,6 +27,8 @@ class Trakt
     public function __construct() {
         $dotenv = new Dotenv(__DIR__ . '/../../');
         $dotenv->load();
+
+        $this->response = new Response();
     }
 
     public function parseRequest($getVariables) {
@@ -37,7 +39,6 @@ class Trakt
             $this->{$name} = strtolower(addslashes(urldecode($getVariables[$name])));
         }
         $this->api = new Api();
-        $this->response = new Response();
     }
 
     public function getResult() {
